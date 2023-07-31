@@ -1,0 +1,84 @@
+@import "_color.scss";
+@import "_media-screen-breakpoin.scss";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
+
+body,
+html {
+  outline: none;
+  scroll-behavior: smooth;
+}
+
+input::placeholder {
+  color: var(--gray);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+.p {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  transition: 0.3s;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+button {
+  outline: unset;
+
+  &:focus {
+    outline: unset;
+  }
+}
+
+a {
+  text-decoration: none !important;
+  color: unset;
+
+  &:hover {
+    color: unset;
+  }
+
+  &:focus {
+    outline: unset;
+  }
+}
+
+.noscroll {
+  overflow: hidden;
+}
+
+.overlay {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  background-color: black;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  transition: 0.3s;
+  z-index: 81;
+
+  &.active {
+    @include lg {
+      opacity: 0.5;
+      visibility: visible;
+    }
+  }
+}
